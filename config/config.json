@@ -14,10 +14,16 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "Williamcurotto",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "ukxdwifbhirkyo",
+    "password": VBnaitNfN5Vmi4huIddc_wVaZm,
+    "database": "d66jtgk64a42bn",
+    "host": "ec2-107-20-214-225.compute-1.amazonaws.com",
+    "port": "5432",
     "dialect": "postgres"
   }
 }
+
+
+//
+
+//postgres://ukxdwifbhirkyo:VBnaitNfN5Vmi4huIddc_wVaZm@ec2-107-20-214-225.compute-1.amazonaws.com:5432/d66jtgk64a42bn
