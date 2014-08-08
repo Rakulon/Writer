@@ -94,6 +94,15 @@ app.get('/', function(req,res){
     res.redirect('/home');
   }
 });
+app.get('/list', function(req,res){
+  // check if the author is logged in
+  if(!req.author) {
+    res.render("list");
+  }
+  else{
+    res.redirect('/home');
+  }
+});
 
 app.get('/signup', function(req,res){
   if(!req.author) {
@@ -189,7 +198,7 @@ app.get('*', function(req,res){
 // 	})
 // })
 
-app.listen(process.env.PORT || 3000, function(){
+app.listen(process.env.PORT || 3000 , function(){
 	console.log("server listening on port 3000")
 })
 
