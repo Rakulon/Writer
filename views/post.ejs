@@ -6,55 +6,83 @@
   </div>
 
 
-<div id="masonary">
-  <% images.forEach(function(image) {%>
-   <div class="item">
-<img src="https://farm<%= image.farm %>.staticflickr.com/<%= image.server %>/<%= image.id %>_<%= image.secret %>.jpg"/>   </div>
+<div class="masonry">
+  <% images.forEach(function(image, index) {%>
+
+   <div class="item" style = "background-image: url('https://farm<%= image.farm %>.staticflickr.com/<%= image.server %>/<%= image.id %>_<%= image.secret %>.jpg')">
+ <!-- <img src="https://farm<%= image.farm %>.staticflickr.com/<%= image.server %>/<%= image.id %>_<%= image.secret %>.jpg"/>  -->
+ </div> 
+  	
     <% }) %>
- 
-  </div>
+ </div> 
+
+  
+<!-- 
+<p>Click to toggle item size</p>
+<div class="masonry">
+  <div class="item"></div>
+  <div class="item w2 h2"></div>
+  <div class="item h3"></div>
+  <div class="item h2"></div>
+  <div class="item w3"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item h2"></div>
+  <div class="item w2 h3"></div>
+  <div class="item"></div>
+  <div class="item h2"></div>
+  <div class="item"></div>
+  <div class="item w2"></div>
+  <div class="item"></div>
+  <div class="item h2"></div>
+  <div class="item"></div>
+  <div class="item w3"></div>
+  <div class="item"></div>
+  <div class="item h2"></div>
+</div> -->
+
+
 
 <script type="text/javascript"> 
 
-	var container = document.getElementById('masonary');
+	// var container = document.getElementById('masonary');
 
-	var msnry;
-// initialize Masonry after all images have loaded
-imagesLoaded( container, function() {
-	console.log("images loaded");
-  msnry = new Masonry( container, {
-  	 columnWidth: 300,
-	  itemSelector: '.item'
-  });
-});
+	// var msnry;
+// // initialize Masonry after all images have loaded
+// imagesLoaded( container, function() {
+//   msnry = new Masonry( container, {
+//   	 columnWidth: 300,
+// 	  itemSelector: '.item'
+//   });
+// });
 
-var container = document.querySelector('masonary');
+
+
+ var container = document.querySelector('.masonry');
   var msnry = new Masonry( container, {
     columnWidth: 60
   });
 
-//   eventie.bind( container, 'click', function( event ) {
-//     // don't proceed if item was not clicked on
-//     if ( !classie.has( event.target, 'item' ) ) {
-//       return;
-//     }
-//     // change size of item via class
-//     classie.toggle( event.target, 'gigante' );
-//     // trigger layout
-//     msnry.layout();
-//   });
+   eventie.bind( container, 'click', function( event ) {
+    // don't proceed if item was not clicked on
+    if ( !classie.has( event.target, 'item' ) ) {
+      return;
+    }
+    // change size of item via class
+    classie.toggle( event.target, 'gigante' );
+    // trigger layout
+    msnry.layout();
+  });
 
-// });
 
-container.onclick = function(event) {
-	console.log(event.target.parentElement);
-	var div = event.target.parentElement;
-	if (div.classList.contains("item")) {
-		div.classList.add('gigante');
-		msnry.layout();
-	}
+// container.onclick = function(event) {
+// 	var div = event.target.parentElement;
+// 	if (div.classList.contains("item")) {
+// 		div.classList.add('gigante');
+// 		msnry.layout();
+// 	}
 
-};
+// };
 
 
 

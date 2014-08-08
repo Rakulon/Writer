@@ -158,7 +158,7 @@ app.get('/logout', function(req,res){
 app.get("/post/:id", function(req, res) {
 	db.post.find(req.params.id).success(function(post){
 		Flickr.tokenOnly(flickrOptions, function(error, flickr) {
-			flickr.photos.search({text: post.name, per_page: 5},
+			flickr.photos.search({text: post.name, per_page: 25},
 	  			function(err, result) {
 	  				if(err) { throw new Error(err); }
 	  				console.log(result.photos.photo[0]);
