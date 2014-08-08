@@ -15,7 +15,7 @@
   },
   "production": {
     "username": "ukxdwifbhirkyo",
-    "password": VBnaitNfN5Vmi4huIddc_wVaZm,
+    "password": "VBnaitNfN5Vmi4huIddc_wVaZm", 
     "database": "d66jtgk64a42bn",
     "host": "ec2-107-20-214-225.compute-1.amazonaws.com",
     "port": "5432",
