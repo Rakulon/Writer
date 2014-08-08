@@ -1,9 +1,9 @@
 body {
   padding-top: 20px;
-  background-color: darkgrey;
+  background-color: rgba(84,84,84,1);
 }
 div.masonry {
-  background-color: darkgrey;
+  background-color: rgba(84,84,84,0);
 }
 .footer {
   padding-top: 40px;
