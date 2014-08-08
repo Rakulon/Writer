@@ -1,0 +1,24 @@
+<% include partials/header.ejs%>
+
+	<%  if (!isAuthenticated){ %>
+		<br>
+		<div class="alert alert-warning">
+		<a href="/login">You must be logged in to view this page</a>
+		</div>
+	<%  } else {%>
+
+	<div class="col-4-md">
+	<h1>Hello, <%= author.name %> - welcome to story time, post a story!</h1>
+	<form action="/createpost" method = "post">
+		<label for="title">Title: </label> <br>
+		<input type="text" name="title" id="title" autofocus value = "title" size="75"><br>
+		<label for="content"> Content: </label> <br>
+		<textarea name="content" cols="100" rows="20" id="content" ></textarea><br>
+		<input type="submit" value="Post" class = "btn btn-primary btn-lg">
+	</form>
+	<div>
+
+	<%  }%>
+
+
+<% include partials/footer.ejs%>

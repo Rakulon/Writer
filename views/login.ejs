@@ -1,0 +1,27 @@
+<% include partials/header.ejs %>  
+
+	<h1>Login </h1>
+
+	<% if (typeof message !== 'undefined') { %>
+		<p style = "color:red;">
+		<%= message %>
+		</p>
+	<% } %>
+
+	<br>
+		<form action="/login" method = "post">
+
+			<p>
+				<label for="name">Name: </label> 
+				<input type="text" name="name" id="name" autofocus value = <%=name %>>
+			</p>
+			<p>
+				<label for="pass">Password:</label>
+				<input type="password" name="password" id="pass">
+			</p>
+			<p>
+				<input type="submit" value="Log In" class ="btn btn-primary ">
+			</p>
+		</form>
+		<a href="/signup">Don't have an account? Create one here</a>	
+<% include partials/footer.ejs %>  
