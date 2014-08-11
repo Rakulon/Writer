@@ -1,6 +1,5 @@
 #StoryBook 
 ===
-
 ##Overveiw
 Storybook is an app that makes use of authentication and authorizaton, flickr api and masonry.
 
